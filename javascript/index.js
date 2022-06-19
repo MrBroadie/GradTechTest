@@ -25,7 +25,7 @@ function addMedalsToTable(medals, medalTable) {
       position === 1 ? medalTable[country] =  medalTable[country] + 3 
         : position === 2 ? medalTable[country] = medalTable[country] + 2
           : position === 3 ? medalTable[country] = medalTable[country] + 1
-            : console.log(`${country} is out of medal range in ${sport.sport}`);
+            : console.log(`${country} is out of medal range in ${sport.sport}`); 
     })
   })
 }
@@ -37,5 +37,4 @@ function sortTable(medalTable) {
   return sortedTable;
 }
 
-console.log()
 module.exports = createMedalTable;
