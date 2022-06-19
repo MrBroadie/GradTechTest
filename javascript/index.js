@@ -17,15 +17,15 @@ function createMedalTable(medals) {
 
 function addMedalsToTable(medals, medalTable) {
   medals.map(sport => {
-    let counter = 0;
     // The winner gets 3 points, second place 2 points and third place 1 point
     sport.podium.forEach(country => {
+      //get position out of string and convert to number type
+      const position = +country.slice(0, 1)
       country = country.slice(2);
-      counter === 0 ? medalTable[country] =  medalTable[country] + 3 
-        : counter === 1 ? medalTable[country] = medalTable[country] + 2
-          : counter === 2 ? medalTable[country] = medalTable[country] + 1
+      position === 1 ? medalTable[country] =  medalTable[country] + 3 
+        : position === 2 ? medalTable[country] = medalTable[country] + 2
+          : position === 3 ? medalTable[country] = medalTable[country] + 1
             : console.log(`${country} is out of medal range in ${sport.sport}`);
-      counter++;
     })
   })
 }
@@ -37,4 +37,5 @@ function sortTable(medalTable) {
   return sortedTable;
 }
 
+console.log()
 module.exports = createMedalTable;

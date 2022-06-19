@@ -14,7 +14,7 @@ describe('Medal Table Generator', () => {
     },
     {
       sport: 'high jump',
-      podium: ['1.Italy', '2.Qatar', '3.Belarus']
+      podium: ['1.Italy', '1.Qatar', '3.Belarus']
     },
     {
       sport: 'swimming',
@@ -28,8 +28,8 @@ describe('Medal Table Generator', () => {
       'France': 4,
       'ROC': 4,
       'USA': 3,
+      'Qatar': 3,
       'China': 3,
-      'Qatar': 2,
       'Germany': 2,
       'Brazil': 1,
       'Belarus': 1,
